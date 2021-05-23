@@ -12,8 +12,8 @@ export default function Expenses(props) {
   
   return (
     <div>
-      <ExpensesFilter onFilterChange={ filterChangeHandler }/>
       <Card className="expenses">
+      <ExpensesFilter onFilterChange={ filterChangeHandler }/>
         {props.expenses.map((item) => {
           if (item.date.getFullYear().toString() === selectedYear) {
             return (

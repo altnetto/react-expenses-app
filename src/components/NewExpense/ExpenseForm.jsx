@@ -59,7 +59,7 @@ const ExpenseForm = (props) => {
             that are going to call the saveExpenseHandler method as well */
         props.onSaveExpenseData(expenseData);
 
-        setEnteredDate('');
+        setEnteredTitle('');
         setEnteredAmount('');
         setEnteredDate('');
 

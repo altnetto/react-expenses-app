@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 // React Hooks: useState, useEffect ...
 
 export default function ExpenseItem(props) {
-  const amount = `$ ${props.amount.toFixed(2)}`;
+  const amount = `$ ${parseFloat(props.amount).toFixed(2)}`;
   const [title, setTitle] = useState(props.title);
   // we can asign the state hook as const because, when it it
   // called, the page renders again

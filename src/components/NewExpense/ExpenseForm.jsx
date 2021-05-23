@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import './ExpenseForm.css'
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
 
     const [enteredTitle, setEnteredTitle] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
@@ -54,6 +54,10 @@ const ExpenseForm = () => {
             amount: enteredAmount,
             date: new Date( enteredDate)
         };
+
+        /*  On that point, we are calling the Parent property onSaveExpenseData,
+            that are going to call the saveExpenseHandler method as well */
+        props.onSaveExpenseData(expenseData);
 
         setEnteredDate('');
         setEnteredAmount('');
